@@ -1,11 +1,11 @@
 require('sinatra')
 require('sinatra/reloader')
-also_reload('lib/**/*.rb')
-require('./lib/title_case')
+also_reload('lib/**/*.rb') # this line allows us to see changes in sinatra w/o re starting the server
+require('./lib/title_case') #
 require('pry')
 
-get('/form') do
-  erb(:form)
+get('/') do
+  erb(:index)
 end
 
 get('/title') do
